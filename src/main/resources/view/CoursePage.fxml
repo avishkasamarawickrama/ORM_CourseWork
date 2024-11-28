@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.CourseController">
+
+    <Label layoutX="750.0" layoutY="30.0" text="Course Management">
+        <font>
+            <Font name="System Bold" size="36.0" />
+        </font>
+    </Label>
+
+    <Label layoutX="50.0" layoutY="150.0" style="-fx-alignment: black; -fx-font-size: 18px;" text="Program ID:" />
+    <Label fx:id="lblCourseID" layoutX="200.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="50.0" layoutY="220.0" style="-fx-alignment: black; -fx-font-size: 18px;" text="Program Name:" />
+    <TextField fx:id="txtProgramName" layoutX="200.0" layoutY="220.0" prefWidth="300.0" promptText="Enter Program Name" style="-fx-font-size: 16px;" />
+
+    <Label layoutX="50.0" layoutY="290.0" style="-fx-alignment: black; -fx-font-size: 18px;" text="Duration:" />
+    <TextField fx:id="txtDuration" layoutX="200.0" layoutY="290.0" prefWidth="300.0" promptText="Enter Duration" style="-fx-font-size: 16px;" />
+
+    <Label layoutX="50.0" layoutY="360.0" style="-fx-alignment: black; -fx-font-size: 18px;" text="Course Fee:" />
+    <TextField fx:id="txtCourseFee" layoutX="200.0" layoutY="360.0" prefWidth="300.0" promptText="Enter Course Fee" style="-fx-font-size: 16px;" />
+
+    <Button fx:id="btnAdd" layoutX="50.0" layoutY="450.0" onAction="#btnAddOnAction" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Add" />
+    <Button fx:id="btnUpdate" layoutX="170.0" layoutY="450.0" onAction="#btnUpdateOnAction" prefWidth="100.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 16px;" text="Update" />
+    <Button fx:id="btnDelete" layoutX="290.0" layoutY="450.0" onAction="#btnDeleteOnAction" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 16px;" text="Delete" />
+    <Button fx:id="btnClear" layoutX="410.0" layoutY="450.0" onAction="#btnClearOnAction" prefWidth="100.0" style="-fx-background-color: #607D8B; -fx-text-fill: white; -fx-font-size: 16px;" text="Clear" />
+
+    <Button fx:id="btnBack" layoutX="50.0" layoutY="50.0" onAction="#btnBackOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Back" />
+
+    <TableView fx:id="tblCourse" layoutX="550.0" layoutY="150.0" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;">
+        <columns>
+            <TableColumn fx:id="colID" prefWidth="150.0" text="ID" />
+            <TableColumn fx:id="colProgramme" prefWidth="400.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="400.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="350.0" text="Course Fee" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

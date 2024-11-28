@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.StudentController">
+
+<!-- Header Label -->
+<Label layoutX="772.0" layoutY="14.0" prefHeight="44.0" prefWidth="300.0" style="-fx-text-fill: #333333;" text="Student Manage">
+    <font>
+        <Font name="System Bold" size="36.0" />
+    </font>
+</Label>
+
+<!-- Back Button -->
+<Button fx:id="btnBack" layoutX="34.0" layoutY="22.0" onAction="#btnBackOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Back" />
+
+<!-- Labels and Input Fields -->
+<Label layoutX="50.0" layoutY="150.0" style="-fx-font-size: 16px; -fx-text-fill: #555555;" text="Student ID:" />
+<Label layoutX="50.0" layoutY="200.0" style="-fx-font-size: 16px; -fx-text-fill: #555555;" text="Name:" />
+<TextField fx:id="txtName" layoutX="150.0" layoutY="200.0" onKeyTyped="#Name" prefWidth="250.0" promptText="Enter Name" style="-fx-font-size: 14px; -fx-background-color: #E8F5E9; -fx-text-fill: #000000;" />
+
+<Label layoutX="50.0" layoutY="250.0" style="-fx-font-size: 16px; -fx-text-fill: #555555;" text="Phone Number:" />
+<TextField fx:id="txtPhoneNumber" layoutX="150.0" layoutY="250.0" onKeyTyped="#Phone" prefWidth="250.0" promptText="Enter Phone Number" style="-fx-font-size: 14px; -fx-background-color: #E8F5E9; -fx-text-fill: #000000;" />
+
+<Label layoutX="50.0" layoutY="300.0" style="-fx-font-size: 16px; -fx-text-fill: #555555;" text="Email:" />
+<TextField fx:id="txtEmail" layoutX="150.0" layoutY="300.0" onKeyTyped="#Email" prefWidth="250.0" promptText="Enter Email" style="-fx-font-size: 14px; -fx-background-color: #E8F5E9; -fx-text-fill: #000000;" />
+
+<Label layoutX="50.0" layoutY="350.0" style="-fx-font-size: 16px; -fx-text-fill: #555555;" text="Address:" />
+<TextField fx:id="txtAddress" layoutX="150.0" layoutY="350.0" onKeyTyped="#Address" prefWidth="250.0" promptText="Enter Address" style="-fx-font-size: 14px; -fx-background-color: #E8F5E9; -fx-text-fill: #000000;" />
+
+<!-- Action Buttons -->
+<Button fx:id="btnAdd" layoutX="50.0" layoutY="500.0" onAction="#btnAddOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; padding: 10px 20px;" text="Add" />
+<Button fx:id="btnUpdate" layoutX="150.0" layoutY="500.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 16px; padding: 10px 20px;" text="Update" />
+<Button fx:id="btnDelete" layoutX="250.0" layoutY="500.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 16px; padding: 10px 20px;" text="Delete" />
+<Button fx:id="btnClear" layoutX="350.0" layoutY="500.0" onAction="#btnClearOnAction" style="-fx-background-color: #607D8B; -fx-text-fill: white; -fx-font-size: 16px; padding: 10px 20px;" text="Clear" />
+
+<!-- Table View for Displaying Student Details -->
+<TableView fx:id="tblStudents" layoutX="450.0" layoutY="100.0" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: white; -fx-border-color: green;">
+    <columns>
+        <TableColumn fx:id="colStudentID" prefWidth="120.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Student ID" />
+        <TableColumn fx:id="colName" prefWidth="250.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Name" />
+        <TableColumn fx:id="colPhoneNumber" prefWidth="200.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Phone Number" />
+        <TableColumn fx:id="colEmail" prefWidth="250.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Email" />
+        <TableColumn fx:id="colAddress" prefWidth="250.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Address" />
+        <TableColumn fx:id="colUserID" prefWidth="120.0" style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="UserID" />
+    </columns>
+</TableView>
+
+<!-- ComboBox for User Selection -->
+<ComboBox fx:id="cmbUser" layoutX="150.0" layoutY="100.0" onAction="#cmbUserOnAction" prefWidth="250.0" promptText="USER ID" style="-fx-font-size: 14px; -fx-background-color: #E8F5E9; -fx-text-fill: #000000;" />
+
+<!-- Student ID Label (Dynamic) -->
+<Label fx:id="lblStudentID" layoutX="150.0" layoutY="150.0" prefHeight="18.0" prefWidth="250.0" style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-border-color: green;" />
+</AnchorPane>
